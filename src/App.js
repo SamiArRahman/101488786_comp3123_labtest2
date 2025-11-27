@@ -80,7 +80,7 @@ export default function App() {
   async function fetchWeather(cityName) {
     if (!key) throw new Error("Missing API key. Put it in .env as REACT_APP_OWM_KEY");
     const url =
-      `:http://api.openweathermap.org/data/2.5/weather?q=Toronto` +
+      `https://api.openweathermap.org/data/2.5/weather` +
       `?q=${encodeURIComponent(cityName)}` +
       `&appid=${encodeURIComponent(key)}` +
       `&units=metric`;
@@ -88,7 +88,6 @@ export default function App() {
     const res = await fetch(url);
     const json = await res.json();
 
-    // OpenWeatherMap returns cod as number or string sometimes
     if (!res.ok || String(json.cod) !== "200") {
       throw new Error(json.message || "Failed to fetch weather");
     }
@@ -96,7 +95,6 @@ export default function App() {
   }
 
   useEffect(() => {
-    // fetch once on load (lifecycle via useEffect)
     (async () => {
       try {
         setLoading(true);
@@ -109,7 +107,7 @@ export default function App() {
         setLoading(false);
       }
     })();
-  }, []); // runs once
+  }, []); 
 
   async function onSearch(e) {
     e.preventDefault();
@@ -117,7 +115,7 @@ export default function App() {
       setLoading(true);
       setError("");
       const json = await fetchWeather(city.trim());
-      setData(json); // state update
+      setData(json); 
     } catch (e2) {
       setError(e2.message);
       setData(null);
