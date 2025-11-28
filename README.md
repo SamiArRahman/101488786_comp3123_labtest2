@@ -21,7 +21,9 @@ Endpoint: https://api.openweathermap.org/data/2.5/weather
 - Weather icon and themed UI
 
 ## Screenshots
+<img width="1616" height="782" alt="labtest2output" src="https://github.com/user-attachments/assets/c34363f4-0e53-4b91-9e2a-b20ccd7f3da2" />
 
+<img width="1028" height="920" alt="labtest2" src="https://github.com/user-attachments/assets/d18d5f09-b75f-4263-beb3-0f86b5889261" />
 
 
 ## Vercel
