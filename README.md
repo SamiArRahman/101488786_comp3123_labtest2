@@ -25,4 +25,4 @@ Endpoint: https://api.openweathermap.org/data/2.5/weather
 
 
 ## Vercel
-
+https://101488786-comp3123-labtest2.vercel.app/
