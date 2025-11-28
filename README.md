@@ -25,4 +25,4 @@ Endpoint: https://api.openweathermap.org/data/2.5/weather
 
 
 ## Vercel
-(Add your Vercel/Railway/Render link here)
+
